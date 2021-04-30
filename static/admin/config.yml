@@ -64,7 +64,15 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Introduction", name: "intro", widget: "markdown"}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: "Blurb", name: "blurb", widget: "markdown"}
+              - {label: Photo, name: photo, widget: image}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
