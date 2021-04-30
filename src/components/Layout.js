@@ -49,8 +49,13 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
-      <Footer />
+      <article>
+        <h1>Under construction</h1>
+        <div>
+            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="https://www.instagram.com/queerlandcenter/">contact us on Instagram</a>, otherwise we&rsquo;ll be back online shortly!</p>
+            <p>&mdash; The QueerLand Team</p>
+        </div>
+      </article>
     </div>
   )
 }
