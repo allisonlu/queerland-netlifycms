@@ -9,7 +9,9 @@ import Content, { HTMLContent } from '../components/Content'
 export const EventSingleTemplate = ({
   content,
   contentComponent,
-  description,
+  link,
+  image,
+  date,
   tags,
   title,
   helmet,
@@ -22,11 +24,29 @@ export const EventSingleTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+
+            {image != null ? (
+              <div 
+                class="full-width-image-container mt-0"
+                style={{
+                  backgroundImage: `url( ${image.publicURL})`
+                }}
+              ></div>
+            ) : null }
+
+            <time class="is-size-5">{date}</time>
+
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+
             <EventContent content={content} />
+
+            {/* don't show button if event occurred in past  */}
+            {Date.parse(date) > Date.now() ? (
+              <a href={link} class="button is-link is-medium mt-6">RSVP here</a>
+            ) : null }
+
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -39,6 +59,7 @@ export const EventSingleTemplate = ({
                 </ul>
               </div>
             ) : null}
+
           </div>
         </div>
       </div>
@@ -49,7 +70,9 @@ export const EventSingleTemplate = ({
 EventSingleTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  date: PropTypes.string,
+  image: PropTypes.string,
+  link: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -62,9 +85,8 @@ const EventSingle = ({ data }) => {
       <EventSingleTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Events">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -72,6 +94,9 @@ const EventSingle = ({ data }) => {
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
+        image={post.frontmatter.featuredimage}
+        link={post.frontmatter.link}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
@@ -93,10 +118,14 @@ export const eventPageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM DD, YYYY", fromNow: true)
         title
         description
+        link
         tags
+        featuredimage {
+          publicURL
+        }
       }
     }
   }

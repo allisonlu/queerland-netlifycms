@@ -8,16 +8,16 @@ export default class EventsPage extends React.Component {
     return (
       <Layout>
         <div
-          className="full-width-image-container margin-top-0"
+          className="full-width-image-container mt-0"
           style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
+            backgroundImage: `url('/img/tanushree-rao-xqpni9wh0ck-unsplash.jpg')`,
           }}
         >
           <h1
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
+              boxShadow: '0.5rem 0 0 #9e66a3, -0.5rem 0 0 #9e66a3',
+              backgroundColor: '#9e66a3',
               color: 'white',
               padding: '1rem',
             }}
