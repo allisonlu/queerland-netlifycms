@@ -118,7 +118,7 @@ export const eventPageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY", fromNow: true)
+        date(formatString: "MMMM DD, YYYY")
         title
         description
         link

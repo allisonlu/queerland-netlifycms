@@ -12,7 +12,7 @@ class EventList extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="column is-10 is-offset-1" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -29,18 +29,17 @@ class EventList extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <div>
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title is-spaced has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <time className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
-                    </span>
-                  </p>
+                    </time>
+                  </div>
                 </header>
               </article>
             </div>
