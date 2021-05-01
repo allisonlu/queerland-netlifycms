@@ -2,27 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const TeamMember = ({ data }) => (
-  <ul>
+  <ul className="columns is-multiline">
     {data.map((person) => (
-      <li key={person} class="mb-5">
-        <div class="card">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-96x96">
-                  <img class="is-rounded" src={person.photo} alt="" />
+      <li key={person.name} className="column is-6">
+        <div className="card">
+          <div className="card-content">
+            <div className="media">
+              <div className="media-left">
+                <figure className="image is-96x96">
+                  <img 
+                    className="is-rounded" 
+                    src={person.photo} 
+                    alt={person.name} />
                 </figure>
               </div>
-              <div class="media-content pt-4">
-                <p class="title is-4">{person.name}</p>
-                <p class="subtitle is-5">{person.position}</p>
+              <div className="media-content pt-4">
+                <p className="title is-4">{person.name}</p>
+                <p className="subtitle is-5">{person.position}</p>
               </div>
             </div>
-            <p class="content">{person.blurb}</p>
+            <p className="content">{person.blurb}</p>
           </div>
         </div>
       </li>
     ))}
+
   </ul>
 )
 
