@@ -63,13 +63,14 @@ export const IndexPageTemplate = ({
         </h2>
       </div>
     </div>
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
+                <div className="content column is-10 is-offset-1">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
@@ -77,34 +78,23 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
+                <div className="column is-10 is-offset-1">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    {heading}
+                  </h3>
+                  <p>{description}</p>
                 </div>
 
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+                <Features gridItems={intro.blurbs} />
+
+                <div>
+                  <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-1">
                     Latest events
                   </h3>
                   <EventList />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/events">
                       See more events
-                    </Link>
-                  </div>
-                </div>
-
-              
-                <Features gridItems={intro.blurbs} />
-                
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
                     </Link>
                   </div>
                 </div>
@@ -190,7 +180,7 @@ export const pageQuery = graphql`
           }
           heading
           description
-        }
+        }        
       }
     }
   }
