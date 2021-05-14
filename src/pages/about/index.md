@@ -59,6 +59,6 @@ team:
 ---
 QueerLand is a 100% volunteer and LGBTQ+-run nonprofit dedicated to creating a safe space for the next generation of LGBTQ+ youth artists. Our mission is to empower LGBTQIA+ youth (ages 14–24) by providing life-changing opportunities for queer youth to train in the arts, offering opportunities to perform and showcase their work, offering opportunities to participate in wellness activities and programs, learn about queer culture through our lending library of LGBTQIA+ works (when we have a brick and mortar center) and Q&A panels with queer creators, and have a space to connect with the queer community through arts-oriented social events. 
 
-Meet the team that works behind the scenes to make all of this possible!
-
 ## Team
+
+Meet the team that works behind the scenes to make all of this possible!
