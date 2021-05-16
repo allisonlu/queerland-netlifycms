@@ -1,5 +1,5 @@
 ---
-templateKey: resources-page
+templateKey: landing-page
 title: Resources
 intro: hello testing testing
 ---
