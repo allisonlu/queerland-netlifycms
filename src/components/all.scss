@@ -4,12 +4,49 @@ $white: #fff;
 
 $primary: $queerland-purple;
 $primary-invert: $white;
+$link: $primary;
 $body-color: #333;
 $black: #2b2523;
 $white-ter: rgb(179, 179, 170);
 
-$link: $primary;
-$link-invert: black;
+.section-divider--rainbow {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  margin-bottom: 0em;
+  padding: 2em 0;
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 50%;
+    left: 0;
+  }
+
+  &::before {
+    background: linear-gradient(90deg, #e8e8e6 0%, #e8e8e6 50%, transparent 50%, transparent 100%);
+    background-size: 15px;
+    z-index: 1;
+  }
+
+  &::after {
+    background: linear-gradient(
+        to right,
+        #9C4F96 5%,
+        #FF6355 15%,
+        #FF6355 25%,
+        #FBA949 35%,
+        #FBA949 45%,
+        #FAE442 55%,
+        #FAE442 65%,
+        #8BD448 75%,
+        #8BD448 85%,
+        #2AA8F2 95%);
+  }
+}
 
 @import "~bulma/css/bulma.css";
 
@@ -121,7 +158,7 @@ footer.footer {
   margin-bottom: 1em;
 }
 .blog-list-item .featured-thumbnail {
-  flex-basis: 35%;
+  flex-basis: 100%;
   margin: 0 1.5em 0 0;
 }
 

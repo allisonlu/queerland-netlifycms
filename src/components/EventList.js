@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import './EventList.scss'
 
 class EventList extends React.Component {
   render() {
@@ -14,34 +16,56 @@ class EventList extends React.Component {
           posts.map(({ node: post }) => (
             <div className="column is-10 is-offset-1" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`event is-child block ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="event__thumbnail mr-5">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          alt: `Image thumbnail for post ${post.frontmatter.title}`,
                         }}
                       />
                     </div>
-                  ) : null}
+                  ) : null }
+
                   <div>
+
+                    <time>
+                      <div className="event__date is-size-5 px-3 has-text-weight-bold">{post.frontmatter.date}</div>
+                      <div className="event__time">{post.frontmatter.time}</div>
+                    </time>
+
                     <Link
-                      className="title is-spaced has-text-primary is-size-4"
+                      className="event__title title is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <time className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </time>
+
+                    {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                      <ul className="event__tags mt-5">
+                        {post.frontmatter.tags.map((tag) => (
+                          <li key={tag + `tag`}>
+                            <Link
+                              className="event__tags-link"
+                              to={`/tags/${kebabCase(tag)}/`}
+                            >{tag}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+
                   </div>
+
                 </header>
               </article>
+
+              <span className="section-divider--rainbow"></span>
+
             </div>
           ))}
       </div>
@@ -74,7 +98,8 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "ddd, MMM DD, YYYY")
+                time(formatString: "h:mma")
                 featuredpost
                 featuredimage {
                   childImageSharp {
@@ -83,6 +108,7 @@ export default () => (
                     }
                   }
                 }
+                tags
               }
             }
           }

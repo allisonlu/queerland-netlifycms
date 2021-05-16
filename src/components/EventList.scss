@@ -1,0 +1,56 @@
+.event {
+  position: relative;
+
+  header {
+    display: flex;
+  }
+
+  &__thumbnail {
+    flex-basis: 100%;
+  }
+
+  &__date {
+    position: absolute;
+    background-color: purple;
+    color: white;
+    right: 0;
+  }
+
+  &__title {
+    color: purple;
+    text-decoration: underline;
+    margin-top: 100px;
+
+    &:hover {
+      color: greenyellow;
+    }
+  }
+
+  // tag list (ul)
+  &__tags {
+    list-style: none;
+
+    &-link {
+      color: green;
+      text-decoration: underline;
+
+      &:hover {
+        color: purple;
+      }
+    }
+
+    // each tag item (li)
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+}
