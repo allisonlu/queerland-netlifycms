@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Layout from '../../components/Layout'
 import EventList from '../../components/EventList'
 
@@ -27,7 +26,7 @@ export default class EventsPage extends React.Component {
         </div>
         <section className="section">
           <div className="container">
-            <div className="content">
+            <div>
               <EventList />
             </div>
           </div>

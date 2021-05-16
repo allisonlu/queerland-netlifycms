@@ -2,6 +2,7 @@
 templateKey: event-single
 title: Essential Tools of Self Editing with Published LGBTQ+ author Michael Daoust
 date: 2021-04-10T23:30:00.000Z
+time: 2021-05-16T01:00:35.136Z
 description: Are you struggling with the self-editing process? Learn the
   essential tools of self eidting with published LGBTQ+ author Michael Daoust.
 link: https://www.instagram.com/p/CMdmVWSnBD-/

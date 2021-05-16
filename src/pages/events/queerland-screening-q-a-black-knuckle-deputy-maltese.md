@@ -2,6 +2,7 @@
 templateKey: event-single
 title: 'QueerLand Screening + Q&A: "Black Knuckle & Deputy Maltese"'
 date: 2021-04-04T00:00:00.000Z
+time: 2021-05-15T20:00:47.996Z
 description: Join QueerLand for a screening + Q&A of "Black Knuckle and Deputy
   Maltese"- a gay Western period piece by Director Jason Phillips
 featuredevent: false

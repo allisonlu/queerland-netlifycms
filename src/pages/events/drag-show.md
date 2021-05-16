@@ -1,9 +1,11 @@
 ---
 templateKey: event-single
+time: 2021-05-15T18:00:06.689Z
+featuredpost: true
 title: Drag bingo
 date: 2021-05-17T15:04:10.000Z
-featuredpost: true
 description: Lorem ipsum
+link: google.com
 tags:
   - creative
   - writing
