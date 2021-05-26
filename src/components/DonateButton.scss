@@ -1,0 +1,15 @@
+// Donate button link
+.donate-button {
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}
