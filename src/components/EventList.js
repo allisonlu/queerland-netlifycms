@@ -11,7 +11,7 @@ class EventList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
             <div className="column is-10 is-offset-1" key={post.id}>

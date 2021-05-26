@@ -6,14 +6,13 @@
   }
 
   &__thumbnail {
-    flex-basis: 100%;
+    flex-basis: 50%;
   }
 
   &__date {
-    position: absolute;
+    display: inline-block;
     background-color: purple;
     color: white;
-    right: 0;
   }
 
   &__title {
