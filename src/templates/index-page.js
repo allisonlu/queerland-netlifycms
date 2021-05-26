@@ -2,10 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import './index-page.scss'
+
 import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import EventList from '../components/EventList'
-import './index-page.scss'
+import BlogRoll from '../components/BlogRoll'
+import DonateButton from '../components/DonateButton'
+
 
 export const IndexPageTemplate = ({
   image,
@@ -65,6 +69,25 @@ export const IndexPageTemplate = ({
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="content">
+          <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
+            News & Updates
+          </h3>
+
+          <div className="column is-10 is-offset-4">
+            <BlogRoll />
+          </div>
+
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="content column is-3 is-offset-5">
+          <DonateButton text="QueerLand" link="/fundly-home"/>
         </div>
       </section>
 
