@@ -2,155 +2,112 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import EventList from '../components/EventList'
+import './index-page.scss'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <div
+  body,
+  contentComponent
+}) => {
+
+  const PageContent = contentComponent || Content
+
+  return (
+    <div>
+
+      <section
+        className="full-width-image mt-0"
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-            '#9e66a3 0.5rem 0px 0px, #9e66a3 -0.5rem 0px 0px',
-            backgroundColor: '#9e66a3',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-            width: 'max-content'
-          }}
-        >
-          {title}
-        </h1>
-        <h2
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            style={{
-              boxShadow:
-              '#9e66a3 0.5rem 0px 0px, #9e66a3 -0.5rem 0px 0px',
-            backgroundColor: '#9e66a3',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h2>
-      </div>
-    </div>
-
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content column is-10 is-offset-1">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="column is-10 is-offset-1">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-
-                <Features gridItems={intro.blurbs} />
-
-                <div>
-                  <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-1">
-                    Latest events
-                  </h3>
-                  <EventList />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/events">
-                      See more events
-                    </Link>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+        <div className="ribbon__container">
+          <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen ribbon">
+            {title}
+          </h1>
+          <h2 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen ribbon">
+            {subheading}
+          </h2>
         </div>
-      </div>
-    </section>
-  </div>
-)
+      </section>
+
+      <section className="section">
+        <div className="content column is-10 is-offset-3">
+            <h3 className="has-text-weight-semibold is-size-2">
+              {heading}
+            </h3>
+
+            <PageContent className="content" content={body} />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="content">
+          <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
+            Latest events
+          </h3>
+
+          <div className="column is-8 is-offset-2">
+            <EventList />
+          </div>
+
+          <div className="has-text-centered">
+            <Link className="home__button" to="/events">
+              See more events
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  )
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  body: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: page } = data
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        contentComponent={HTMLContent}
+        image={page.frontmatter.image}
+        title={page.frontmatter.title}
+        heading={page.frontmatter.heading}
+        subheading={page.frontmatter.subheading}
+        body={page.html}
       />
     </Layout>
   )
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+  data: PropTypes.object.isRequired,
 }
 
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query IndexPageTemplate($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         image {
@@ -162,25 +119,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }        
       }
     }
   }
