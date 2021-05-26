@@ -2,8 +2,13 @@ $queerland-purple: #9e66a3;
 $white: #fff;
 
 $primary: $queerland-purple;
+$primary-light: #c19fc4;
 $primary-invert: $white;
 $link: $primary;
 $body-color: #333;
 $black: #2b2523;
 $white-ter: rgb(179, 179, 170);
+
+$rainbow: (#9C4F96, #FF6355, #FBA949, #FAE442, #8BD448, #2AA8F2);
+// Rainbow gradient idea from Sarah Fossheim: https://fossheim.io/
+$rainbow-gradient: linear-gradient(90deg, $rainbow);

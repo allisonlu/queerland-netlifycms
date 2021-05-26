@@ -37,7 +37,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container column is-6 is-offset-3">
             <div className="content">
               <h1>Contact</h1>
               <p>Let's get in touch!</p>
