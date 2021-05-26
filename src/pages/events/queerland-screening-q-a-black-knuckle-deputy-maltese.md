@@ -9,11 +9,10 @@ featuredevent: false
 featuredimage: /img/04-03-2021-black-knuckle.jpg
 link: https://www.eventbrite.com/e/queerland-screening-qa-black-knuckle-deputy-maltese-tickets-147349318779
 tags:
-  - online
   - film
   - directing
   - q&a
-  - filmscreening
+  - film screening
 ---
 A triplet from San Diego, Director of "Black Knuckle and Deputy Maltese" Jason Phillips holds a BFA in Film Production from the USC School of Cinematic Arts, where he received numerous awards, including the prestigious Malcolm and Berman Family Fund Scholarship for undergraduate producers, and was featured as one of five promising seniors in The Hollywood Reporter.
 

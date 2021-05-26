@@ -10,7 +10,7 @@ featuredimage: /img/04-24-2021-aristotle-and-dante.jpg
 featuredpost: false
 link: https://www.eventbrite.com/e/queerland-book-club-reads-aristotle-and-dante-discover-the-universe-tickets-148282020515
 tags:
-  - bookclub
+  - book club
   - reading
   - writing
   - april

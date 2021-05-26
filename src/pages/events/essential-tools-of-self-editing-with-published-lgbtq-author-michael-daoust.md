@@ -8,7 +8,7 @@ description: Are you struggling with the self-editing process? Learn the
 link: https://www.instagram.com/p/CMdmVWSnBD-/
 tags:
   - writing
-  - selfpublishing
+  - self publishing
   - process
 ---
 Presenging QueerLand's first workshop: Learn how to self-edit with published indie author Michael Daoust!\
