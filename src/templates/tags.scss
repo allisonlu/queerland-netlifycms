@@ -1,0 +1,41 @@
+/******
+  Styles for tags page template (/templates/tags.js)
+******/
+
+.tags {
+  // ul
+  &__list {
+    list-style: none;
+  }
+
+  // each li
+  &__result {
+
+    // Emoji component
+    &-type {
+    }
+
+    // h2 header
+    &-title {
+      width: 80%;
+    }
+
+    &-link {
+      color: purple;
+      text-decoration: underline;
+
+      &:hover {
+        color: greenyellow;
+      }
+    }
+  }
+
+  &__all {
+    color: purple;
+    text-decoration: underline;
+
+    &:hover {
+      color: greenyellow;
+    }
+  }
+}
