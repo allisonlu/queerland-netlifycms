@@ -1,102 +1,103 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import './Footer.scss'
+
 import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import instagram from '../img/social/instagram--color.svg'
+import eventbrite from '../img/social/eventbrite.svg'
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-grey-lighter has-text-white">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Logo"
-            style={{ width: '30em', height: '10em' }}
-          />
-        </div>
-        <div className="has-text-centered has-background-grey-lighter has-text-white-ter">
-          <div className="container has-background-grey-lighter has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/events">
-                        Events
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://www.instagram.com/queerlandcenter/">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-            </div>
+      <footer className="footer__wrapper has-text-centered">
+
+        <img
+          src={logo}
+          alt="Logo"
+          className="footer__logo"
+        />
+
+        <div className="columns footer__menu-container">
+
+          <ul className="column is-4 footer__menu-list">
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/about">
+                About
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/events">
+                Events
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/blog">
+                Blog
+              </Link>
+            </li>
+          </ul>
+
+          <ul className="column is-4 footer__menu-list">
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/resources">
+                Resources
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/donate">
+                Donate
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <Link className="footer__menu-link" to="/contact">
+                Contact
+              </Link>
+            </li>
+            <li className="footer__menu-item">
+              <a
+                className="footer__menu-link"
+                href="/admin/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Admin
+              </a>
+            </li>
+          </ul>
+
+          <div className="column is-4 footer__social">
+            <a
+              title="instagram"
+              href="https://www.instagram.com/queerlandcenter/"
+              className="footer__social-link"
+            >
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="footer__social-logo"
+                />
+            </a>
+            <a
+              title="eventbrite"
+              href="https://www.eventbrite.com/o/queerland-32889686413"
+              className="footer__social-link"
+            >
+              <img
+                src={eventbrite}
+                alt="Eventbrite"
+                className="footer__social-logo"
+                />
+            </a>
           </div>
+
         </div>
+
       </footer>
     )
   }
