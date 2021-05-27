@@ -11,10 +11,10 @@ class EventList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
+      <div className="column is-10 is-offset-1">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="column is-10 is-offset-1" key={post.id}>
+            <div key={post.id}>
               <article
                 className={`event is-child block ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
