@@ -26,15 +26,15 @@ export const EventSingleTemplate = ({
           <div className="column is-10 is-offset-1">
 
             {image != null ? (
-              <div 
-                class="full-width-image-container mt-0"
+              <div
+                className="full-width-image-container mt-0"
                 style={{
                   backgroundImage: `url( ${image.publicURL})`
                 }}
               ></div>
             ) : null }
 
-            <time class="is-size-5">{date}</time>
+            <time className="is-size-5">{date}</time>
 
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
@@ -44,7 +44,7 @@ export const EventSingleTemplate = ({
 
             {/* don't show button if event occurred in past  */}
             {Date.parse(date) > Date.now() ? (
-              <a href={link} class="button is-link is-medium mt-6">RSVP here</a>
+              <a href={link} className="button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
             {tags && tags.length ? (
