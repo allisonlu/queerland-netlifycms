@@ -1,0 +1,37 @@
+@import './_colors';
+
+/**
+  * Extending bulma navbar styles
+  **/
+
+.navbar-brand {
+  a {
+    background-image: linear-gradient(transparent 80%, $primary 60%);
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background .35s;
+
+    &:hover {
+      color: white;
+      background-color: transparent;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.navbar-menu {
+  a {
+    color: black;
+    transition: padding .35s, top .35s;
+    position: relative;
+    border-style: solid;
+    border-width: 0;
+
+    &:hover, &[aria-current="page"] {;
+      top: 0px;
+      border-bottom-width: 5px;
+      border-image: $rainbow-gradient 1;
+    }
+  }
+}
