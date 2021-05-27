@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
         }}
       >
         <div className="ribbon__container">
-          <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen ribbon">
+          <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen is-family-monospace ribbon">
             {title}
           </h1>
           <h2 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen ribbon">
@@ -59,7 +59,7 @@ export const IndexPageTemplate = ({
             Latest events
           </h3>
 
-          <div className="column is-8 is-offset-2">
+          <div className="home__post-section">
             <EventList />
           </div>
 
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
             News & Updates
           </h3>
 
-          <div className="column is-10 is-offset-4">
+          <div className="home__post-section">
             <BlogRoll />
           </div>
 

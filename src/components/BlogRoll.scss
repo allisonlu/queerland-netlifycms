@@ -1,0 +1,38 @@
+@import './_colors';
+
+.blog__post {
+  position: relative;
+  border-image: $rainbow-gradient 1;
+  border-width: 1px;
+
+  &-thumbnail {
+    margin-bottom: 10px;
+    width: 50%;
+  }
+
+  header {
+    display: flex;
+  }
+
+  &-title {
+    color: $primary;
+    text-decoration: underline;
+
+    &:hover {
+      color: greenyellow;
+    }
+  }
+
+  &-date {
+    display: inline-block;
+
+    &::before {
+      content: '• ';
+      margin-left: 5px;
+    }
+  }
+
+  &-excerpt {
+    margin-bottom: 20px;
+  }
+}
