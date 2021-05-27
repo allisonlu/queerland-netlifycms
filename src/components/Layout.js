@@ -51,6 +51,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <main>{children}</main>
       <Footer />
+
     </div>
   )
 }
