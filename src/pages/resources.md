@@ -14,3 +14,6 @@ intro: hello testing testing
 # Mental wellness
 
 * Free counseling for youth
+* Bi-weekly online support group
+
+![](/img/resources-online-support-group.jpeg)
