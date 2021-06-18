@@ -19,7 +19,8 @@
     text-decoration: underline;
 
     &:hover {
-      color: greenyellow;
+      color: $white;
+      background-color: $hover;
     }
   }
 
