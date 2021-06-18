@@ -6,6 +6,7 @@ import './Footer.scss'
 import logo from '../img/logo.svg'
 import instagram from '../img/social/instagram--color.svg'
 import eventbrite from '../img/social/eventbrite.svg'
+import facebook from '../img/social/facebook--color.svg'
 
 const Footer = class extends React.Component {
   render() {
@@ -80,6 +81,17 @@ const Footer = class extends React.Component {
               <img
                 src={instagram}
                 alt="Instagram"
+                className="footer__social-logo"
+                />
+            </a>
+            <a
+              title="facebook"
+              href="https://www.facebook.com/queerland.center"
+              className="footer__social-link"
+            >
+              <img
+                src={facebook}
+                alt="Facebook"
                 className="footer__social-logo"
                 />
             </a>
