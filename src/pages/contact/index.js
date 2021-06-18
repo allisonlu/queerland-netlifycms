@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
@@ -40,7 +41,9 @@ export default class Index extends React.Component {
           <div className="container column is-6 is-offset-3">
             <div className="content">
               <h1>Contact</h1>
-              <p>Let's get in touch!</p>
+              <p>Do you have a workshop idea and want to collaborate? Meet with Abbie on <Link to="https://calendly.com/queerland">Calendly</Link>.</p>
+
+              <p>Otherwise, leave a message and we'll get back to you!</p>
               <form
                 name="contact"
                 method="post"
