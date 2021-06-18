@@ -12,6 +12,7 @@ export const EventSingleTemplate = ({
   link,
   image,
   date,
+  time,
   tags,
   title,
   helmet,
@@ -34,7 +35,10 @@ export const EventSingleTemplate = ({
               ></div>
             ) : null }
 
-            <time className="is-size-5">{date}</time>
+            <time className="is-size-5">
+              {date}<br/>
+              {time}
+            </time>
 
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
@@ -71,6 +75,7 @@ EventSingleTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   date: PropTypes.string,
+  time: PropTypes.string,
   image: PropTypes.string,
   link: PropTypes.string,
   title: PropTypes.string,
@@ -95,6 +100,7 @@ const EventSingle = ({ data }) => {
           </Helmet>
         }
         date={post.frontmatter.date}
+        time={post.frontmatter.time}
         image={post.frontmatter.featuredimage}
         link={post.frontmatter.link}
         tags={post.frontmatter.tags}
@@ -119,6 +125,7 @@ export const eventPageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        time(formatString: "LT")
         title
         description
         link
