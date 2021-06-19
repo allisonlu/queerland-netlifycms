@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import './EventList.scss'
+import "./Calendar.scss";
 
 class EventList extends React.Component {
   render() {
