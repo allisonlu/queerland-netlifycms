@@ -1,15 +1,17 @@
+@import './_colors';
+
 // Donate button link
 .donate-button {
   border-radius: 10px;
   display: inline-block;
   cursor: pointer;
   padding: 10px;
-  background-color: green;
+  background-color: $sea;
   color: white;
   font-weight: bold;
 
   &:hover {
-    background-color: blue;
+    background-color: $brunswick;
     color: white;
   }
 }
