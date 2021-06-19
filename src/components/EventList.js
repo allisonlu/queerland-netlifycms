@@ -47,11 +47,11 @@ class EventList extends React.Component {
                     </Link>
 
                     {post.frontmatter.tags && post.frontmatter.tags.length ? (
-                      <ul className="event__tags mt-5">
+                      <ul className="post__tags mt-5 ml-0">
                         {post.frontmatter.tags.map((tag) => (
                           <li key={tag + `tag`}>
                             <Link
-                              className="event__tags-link"
+                              className="post__tags-link"
                               to={`/tags/${kebabCase(tag)}/`}
                             >{tag}</Link>
                           </li>
