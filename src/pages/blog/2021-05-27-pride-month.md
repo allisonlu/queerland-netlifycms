@@ -8,6 +8,5 @@ tags:
 ---
 Pride is coming up. here are the events planned:
 
-1. Event 1
-
+1. [Event 1](google.com)
 2. Envet 2
