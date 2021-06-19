@@ -48,16 +48,19 @@ export const EventSingleTemplate = ({
 
             {/* don't show button if event occurred in past  */}
             {Date.parse(date) > Date.now() ? (
-              <a href={link} className="button is-link is-medium mt-6">RSVP here</a>
+              <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className="mt-6">
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <ul className="post__tags ml-0">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link
+                        className="post__tags-link"
+                        to={`/tags/${kebabCase(tag)}/`}
+                      >{tag}</Link>
                     </li>
                   ))}
                 </ul>
