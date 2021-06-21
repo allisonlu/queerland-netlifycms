@@ -89,7 +89,7 @@ export const IndexPageTemplate = ({
 
       <section className="section">
         <div className="content column is-3 is-offset-5">
-          <DonateButton text="QueerLand" link="/fundly-home"/>
+          <DonateButton text="QueerLand" link="https://www.patreon.com/QueerLand"/>
         </div>
       </section>
 

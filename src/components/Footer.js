@@ -6,6 +6,7 @@ import './Footer.scss'
 import logo from '../img/logo.svg'
 import instagram from '../img/social/instagram--color.svg'
 import eventbrite from '../img/social/eventbrite.svg'
+import patreon from '../img/social/patreon.svg'
 import facebook from '../img/social/facebook--color.svg'
 
 const Footer = class extends React.Component {
@@ -74,7 +75,7 @@ const Footer = class extends React.Component {
 
           <div className="column is-4 footer__social">
             <a
-              title="instagram"
+              title="Instagram"
               href="https://www.instagram.com/queerlandcenter/"
               className="footer__social-link"
             >
@@ -85,7 +86,7 @@ const Footer = class extends React.Component {
                 />
             </a>
             <a
-              title="facebook"
+              title="Facebook"
               href="https://www.facebook.com/queerland.center"
               className="footer__social-link"
             >
@@ -96,13 +97,24 @@ const Footer = class extends React.Component {
                 />
             </a>
             <a
-              title="eventbrite"
+              title="Eventbrite"
               href="https://www.eventbrite.com/o/queerland-32889686413"
               className="footer__social-link"
             >
               <img
                 src={eventbrite}
                 alt="Eventbrite"
+                className="footer__social-logo"
+                />
+            </a>
+            <a
+              title="Patreon"
+              href="https://www.patreon.com/QueerLand"
+              className="footer__social-link"
+            >
+              <img
+                src={patreon}
+                alt="Patreon"
                 className="footer__social-logo"
                 />
             </a>
