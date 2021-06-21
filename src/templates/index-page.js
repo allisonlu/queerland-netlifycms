@@ -6,7 +6,7 @@ import './index-page.scss'
 
 import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
-import EventList from '../components/EventList'
+// import EventList from '../components/EventList'
 import BlogRoll from '../components/BlogRoll'
 import DonateButton from '../components/DonateButton'
 
@@ -59,13 +59,15 @@ export const IndexPageTemplate = ({
             Latest events
           </h3>
 
+          {/*
           <div className="home__post-section">
             <EventList />
           </div>
+          */}
 
           <div className="has-text-centered">
             <Link className="home__button" to="/events">
-              See more events
+              See all events →
             </Link>
           </div>
 

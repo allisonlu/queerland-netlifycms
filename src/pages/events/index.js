@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import EventList from '../../components/EventList'
-import Calendar from '../../components/Calendar'
+import DisplayCalendar from '../../components/DisplayCalendar'
 
 export default class EventsPage extends React.Component {
   render() {
@@ -21,9 +21,9 @@ export default class EventsPage extends React.Component {
         </div>
         <section className="section">
           <div className="container">
-            <Calendar />
+            <DisplayCalendar />
             <span className="section-divider--rainbow"></span>
-            <EventList />
+            {/*<EventList />*/}
           </div>
         </section>
       </Layout>
