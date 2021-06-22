@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import './DonateButton.scss'
 
-const DonateButton = ({ link, text }) => (
+const DonateButton = ({ text }) => (
   <Link
     className="donate-button"
-    to={link}>
+    to="https://www.patreon.com/QueerLand">
     Donate to {text}
   </Link>
 )
