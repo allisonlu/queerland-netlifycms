@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import MarkdownContent from '../components/MarkdownContent'
 
 const TeamMember = ({ data }) => (
   <ul className="columns is-multiline">
@@ -10,9 +11,9 @@ const TeamMember = ({ data }) => (
             <div className="media">
               <div className="media-left">
                 <figure className="image is-96x96">
-                  <img 
-                    className="is-rounded" 
-                    src={person.photo} 
+                  <img
+                    className="is-rounded"
+                    src={person.photo}
                     alt={person.name} />
                 </figure>
               </div>
@@ -21,7 +22,7 @@ const TeamMember = ({ data }) => (
                 <p className="subtitle is-5">{person.position}</p>
               </div>
             </div>
-            <p className="content">{person.blurb}</p>
+            <MarkdownContent className="content" content={person.blurb} />
           </div>
         </div>
       </li>

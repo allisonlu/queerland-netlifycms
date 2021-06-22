@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DonateButton from '../components/DonateButton'
+import MarkdownContent from '../components/MarkdownContent'
 import './DonateTier.scss'
 
 const DonateTier = ({ data }) => (
@@ -11,12 +12,7 @@ const DonateTier = ({ data }) => (
         <div className="donate-tier__content card">
           <h3 className="donate-tier__title is-size-4">{tier.name}</h3>
           <div className="donate-tier__price">$ {tier.price}</div>
-          <p className="donate-tier__description">{tier.description}</p>
-
-          <DonateButton
-            link={tier.link}
-            text={(tier.name).toLowerCase()}
-          />
+          <MarkdownContent className="donate-tier__description" content={tier.description}/>
         </div>
       </li>
     ))}
@@ -29,7 +25,6 @@ DonateTier.propTypes = {
       name: PropTypes.string,
       price: PropTypes.string,
       description: PropTypes.string,
-      link: PropTypes.string,
     })
   ),
 }
