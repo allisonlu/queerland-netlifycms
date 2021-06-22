@@ -71,6 +71,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-google-calendar`,
+      options: {
+        calendarIds: [
+          '790n9b06f8snmariajufu64kn4@group.calendar.google.com',
+        ],
+        // options to retrieve the next 10 upcoming events
+        timeMin: (new Date()).toISOString(),
+        maxResults: 10,
+        singleEvents: true,
+        orderBy: 'startTime',
+      }
+    },
+    {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
