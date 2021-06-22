@@ -69,7 +69,6 @@ export const donatePageQuery = graphql`
           name
           price
           description
-          link
         }
       }
     }
