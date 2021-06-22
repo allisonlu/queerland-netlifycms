@@ -51,8 +51,8 @@
     padding: 2em;
 
     &-link {
-      padding: .5em .5em .3em .5em;
-      border-radius: 1em;
+      padding: 1em .5em .3em .5em;
+      border-radius: 1.5em;
       background-color: $white-ter;
       margin: .5em;
       width: 1em;
@@ -63,11 +63,15 @@
       &:hover {
         background-color: white;
       }
+
+      &:active {
+        background-color: $light-grey;
+      }
     }
 
     &-logo {
-      width: 1em;
-      height: 1em;
+      width: 1.5em;
+      height: 1.5em;
     }
   }
 }
