@@ -53,6 +53,8 @@ export const IndexPageTemplate = ({
         </div>
       </section>
 
+      <span className="section-divider--rainbow"></span>
+
       <section className="section">
         <div className="content">
           <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
@@ -74,6 +76,8 @@ export const IndexPageTemplate = ({
         </div>
       </section>
 
+      <span className="section-divider--rainbow"></span>
+
       <section className="section">
         <div className="content">
           <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
@@ -86,6 +90,8 @@ export const IndexPageTemplate = ({
 
         </div>
       </section>
+
+      <span className="section-divider--rainbow"></span>
 
       <section className="section">
         <div className="content column is-3 is-offset-5">

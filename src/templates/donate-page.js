@@ -22,6 +22,8 @@ export const DonatePageTemplate = ({ title, intro, tierList, contentComponent })
               <PageContent className="content" content={intro} />
 
               <DonateTier data={tierList} />
+
+              <span className="section-divider--rainbow"></span>
             </div>
           </div>
         </div>
