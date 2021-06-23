@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import DonateTier from '../components/DonateTier'
+import DonateButton from '../components/DonateButton'
 import Content, { HTMLContent } from '../components/Content'
 import './donate-page.scss'
 
@@ -19,11 +20,14 @@ export const DonatePageTemplate = ({ title, intro, tierList, contentComponent })
                 {title}
               </h2>
 
-              <PageContent className="content" content={intro} />
+              <PageContent className="content mt-4" content={intro} />
 
               <DonateTier data={tierList} />
 
               <span className="section-divider--rainbow"></span>
+
+              <DonateButton text="Queerland" />
+
             </div>
           </div>
         </div>
