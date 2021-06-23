@@ -35,14 +35,26 @@ export const EventSingleTemplate = ({
               ></div>
             ) : null }
 
+            <nav className="breadcrumb has-text-weight-bold is-large" aria-label="breadcrumbs">
+              <ul className="ml-0">
+                <li>
+                  <Link
+                    to="/events"
+                    className="breadcrumb__link"
+                  >← Back to all events
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
             <time className="is-size-5">
               {date}<br/>
               {time}
             </time>
 
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
-            </h1>
+            </h2>
 
             <EventContent content={content} />
 
@@ -79,7 +91,7 @@ EventSingleTemplate.propTypes = {
   contentComponent: PropTypes.func,
   date: PropTypes.string,
   time: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.object,
   link: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,

@@ -39,12 +39,19 @@ class EventList extends React.Component {
                       <div className="event-card__time">{post.frontmatter.time}</div>
                     </time>
 
-                    <Link
-                      className="event-card__title title is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
+                    <div className="mt-4">
+                      <Link
+                        className="event-card__title title is-size-4"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                    </div>
+
+                    {/* don't show button if event occurred in past  */}
+                    {Date.parse(post.frontmatter.date) > Date.now() ? (
+                      <a href={post.frontmatter.link} className="interior__button is-link is-medium mt-6">RSVP here</a>
+                    ) : null }
 
                     {post.frontmatter.tags && post.frontmatter.tags.length ? (
                       <ul className="post__tags mt-5 ml-0">

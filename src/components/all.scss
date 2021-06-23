@@ -50,6 +50,10 @@
     &:hover {
       color: $primary;
     }
+    
+    &:active {
+      color: $active;
+    }
   }
 
   // each tag item (li)
@@ -97,6 +101,20 @@
 }
 
 @import "~bulma/css/bulma.css";
+
+// breadcrumb link
+a.breadcrumb__link {
+  color: $link;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
 
 // Helper Classes
 .full-width-image-container {
