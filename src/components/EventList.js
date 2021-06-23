@@ -4,7 +4,6 @@ import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import './EventList.scss'
-import "./DisplayCalendar.scss";
 
 class EventList extends React.Component {
   render() {
@@ -17,13 +16,13 @@ class EventList extends React.Component {
           posts.map(({ node: post }) => (
             <div key={post.id}>
               <article
-                className={`event is-child block ${
+                className={`event-card is-child block ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="event__thumbnail mr-5">
+                    <div className="event-card__thumbnail mr-5">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -36,12 +35,12 @@ class EventList extends React.Component {
                   <div>
 
                     <time>
-                      <div className="event__date is-size-5 px-3 has-text-weight-bold">{post.frontmatter.date}</div>
-                      <div className="event__time">{post.frontmatter.time}</div>
+                      <div className="event-card__date is-size-5 px-3 has-text-weight-bold">{post.frontmatter.date}</div>
+                      <div className="event-card__time">{post.frontmatter.time}</div>
                     </time>
 
                     <Link
-                      className="event__title title is-size-4"
+                      className="event-card__title title is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}

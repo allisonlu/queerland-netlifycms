@@ -23,7 +23,9 @@ export default class EventsPage extends React.Component {
           <div className="container">
             <DisplayCalendar />
             <span className="section-divider--rainbow"></span>
-            {/*<EventList />*/}
+          </div>
+          <div className="container">
+            <EventList />
           </div>
         </section>
       </Layout>
