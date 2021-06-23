@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Breadcrumb from '../components/Breadcrumb'
 
 export const EventSingleTemplate = ({
   content,
@@ -35,17 +36,7 @@ export const EventSingleTemplate = ({
               ></div>
             ) : null }
 
-            <nav className="breadcrumb has-text-weight-bold is-large" aria-label="breadcrumbs">
-              <ul className="ml-0">
-                <li>
-                  <Link
-                    to="/events"
-                    className="breadcrumb__link"
-                  >← Back to all events
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <Breadcrumb backTo="/events" />
 
             <time className="is-size-5">
               {date}<br/>
