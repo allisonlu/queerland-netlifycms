@@ -15,12 +15,15 @@ export const DonatePageTemplate = ({ title, intro, tierList, contentComponent })
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+            <div className="section has-text-centered">
+
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/zQP6fYp8LEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light mt-4">
                 {title}
               </h2>
 
-              <PageContent className="content mt-4" content={intro} />
+              <PageContent className="content mt-4 mb-6" content={intro} />
 
               <DonateTier data={tierList} />
 

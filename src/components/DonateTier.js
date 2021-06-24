@@ -12,7 +12,7 @@ const DonateTier = ({ data }) => (
         <div className="donate-tier__content card">
           <h3 className="donate-tier__title is-size-4">{tier.name}</h3>
           <div className="donate-tier__price">$ {tier.price}</div>
-          <MarkdownContent className="donate-tier__description" content={tier.description}/>
+          <MarkdownContent className="donate-tier__description has-text-left" content={tier.description}/>
         </div>
       </li>
     ))}
