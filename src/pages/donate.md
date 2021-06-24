@@ -63,4 +63,4 @@ tiers:
       QueerLands’ soon-to-be-published digital zine of LGBTQIA+ workshop
       participants’ work **and sponsor recognition in the title of the event**!
 ---
-Every amount helps! See tiers below:
+### Every amount helps! See tiers below:
