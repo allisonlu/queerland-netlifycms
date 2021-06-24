@@ -2,7 +2,8 @@
 templateKey: blog-post
 title: Pride month!
 date: 2021-05-27T03:42:36.867Z
-description: lkdsjflkasfjljfka
+description: Pride month events
+featuredimage: /img/pride-month-events.jpeg
 tags:
   - pride
 ---
