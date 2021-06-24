@@ -49,7 +49,7 @@ class EventList extends React.Component {
                     </div>
 
                     {/* don't show button if event occurred in past  */}
-                    {Date.parse(post.frontmatter.date) > Date.now() ? (
+                    {Date.parse(post.frontmatter.date+" 23:59", "yyyy-MM-dd HH:mm:ss") > Date.now() ? (
                       <a href={post.frontmatter.link} className="interior__button is-link is-medium mt-6">RSVP here</a>
                     ) : null }
 

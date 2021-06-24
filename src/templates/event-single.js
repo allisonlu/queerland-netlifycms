@@ -15,7 +15,8 @@ export const EventSingleTemplate = ({
   address,
   image,
   date,
-  time,
+  start,
+  end,
   tags,
   title,
   helmet,
@@ -42,7 +43,7 @@ export const EventSingleTemplate = ({
 
             <time className="is-size-5">
               {date}<br/>
-              {time}
+              {start} – {end}
             </time>
 
             <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
@@ -52,7 +53,7 @@ export const EventSingleTemplate = ({
             <EventContent content={content} />
 
             {/* don't show button if event occurred in past  */}
-            {Date.parse(date) > Date.now() ? (
+            {Date.parse(date+" "+end, "yyyy-MM-dd HH:mm:ss") > Date.now() ? (
               <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
@@ -100,10 +101,11 @@ EventSingleTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   date: PropTypes.string,
-  time: PropTypes.string,
+  start: PropTypes.string,
+  end: PropTypes.string,
   image: PropTypes.object,
   link: PropTypes.string,
-  address: PropTypes.array,
+  address: PropTypes.object,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -126,7 +128,8 @@ const EventSingle = ({ data }) => {
           </Helmet>
         }
         date={post.frontmatter.date}
-        time={post.frontmatter.time}
+        start={post.frontmatter.start_time}
+        end={post.frontmatter.end_time}
         image={post.frontmatter.featuredimage}
         link={post.frontmatter.link}
         address={post.frontmatter.address}
@@ -152,7 +155,8 @@ export const eventPageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        time(formatString: "LT")
+        start_time(formatString: "LT")
+        end_time(formatString: "LT")
         title
         description
         link
