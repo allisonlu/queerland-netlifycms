@@ -9,6 +9,7 @@ description: >
   film; followed by a Q&A with director Lila Schmitz!
 featuredimage: /img/05-27-2021-love.jpeg
 link: https://www.eventbrite.com/e/queerland-presents-love-in-the-time-of-corona-tickets-156135703091
+recording: https://www.youtube.com/watch?v=HjezpvB58x8
 tags:
   - online
   - film

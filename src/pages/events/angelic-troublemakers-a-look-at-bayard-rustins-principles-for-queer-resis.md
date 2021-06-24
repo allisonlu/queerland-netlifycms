@@ -7,6 +7,7 @@ end_time: 2021-06-24T19:46:55.184Z
 description: This workshop will introduce participants to the life and work of
   queer civil rights activist Bayard Rustin & explore Rustin's concepts!
 link: https://www.eventbrite.com/e/angelic-troublemakers-a-look-at-bayard-rustins-principles-for-queer-resis-tickets-157716070011
+recording: https://www.youtube.com/watch?v=dpYO5D68n5g
 tags:
   - online
   - history

@@ -19,6 +19,7 @@ export const EventSingleTemplate = ({
   end,
   tags,
   title,
+  recording,
   helmet,
 }) => {
   const EventContent = contentComponent || Content
@@ -57,7 +58,6 @@ export const EventSingleTemplate = ({
               <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
-
             <div className="mt-6">
               <h3>
                 <span className="mr-2">
@@ -77,6 +77,24 @@ export const EventSingleTemplate = ({
               ) : "Online" }
 
             </div>
+
+            {recording != null ? (
+              <div>
+                <h3 className="mt-5">Recording:</h3>
+
+                <iframe
+                  width="560"
+                  height="315"
+                  src={"https://www.youtube.com/embed/" + recording.substring(32)}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer;
+                  autoplay; clipboard-write;
+                  encrypted-media; gyroscope;
+                  picture-in-picture" allowfullscreen
+                ></iframe>
+              </div>
+            ) : null }
 
 
             {tags && tags.length ? (
@@ -112,6 +130,7 @@ EventSingleTemplate.propTypes = {
   link: PropTypes.string,
   address: PropTypes.object,
   title: PropTypes.string,
+  recording: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -140,6 +159,7 @@ const EventSingle = ({ data }) => {
         address={post.frontmatter.address}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        recording={post.frontmatter.recording}
       />
     </Layout>
   )
@@ -175,6 +195,7 @@ export const eventPageQuery = graphql`
         featuredimage {
           publicURL
         }
+        recording
       }
     }
   }
