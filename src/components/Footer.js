@@ -8,6 +8,7 @@ import instagram from '../img/social/instagram--color.svg'
 import eventbrite from '../img/social/eventbrite.svg'
 import patreon from '../img/social/patreon.svg'
 import facebook from '../img/social/facebook--color.svg'
+import youtube from '../img/social/youtube.svg'
 
 const Footer = class extends React.Component {
   render() {
@@ -93,6 +94,17 @@ const Footer = class extends React.Component {
               <img
                 src={facebook}
                 alt="Facebook"
+                className="footer__social-logo"
+                />
+            </a>
+            <a
+              title="Youtube"
+              href="https://www.youtube.com/channel/UCq1RVgF0uC0-l9LEoGkyxpA"
+              className="footer__social-link"
+            >
+              <img
+                src={youtube}
+                alt="Youtube"
                 className="footer__social-logo"
                 />
             </a>
