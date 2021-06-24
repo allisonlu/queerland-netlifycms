@@ -27,13 +27,14 @@ export const BlogPostTemplate = ({
 
             <Breadcrumb backTo="/blog" />
 
+            <time className="is-size-5 mb-5">{date}</time>
+
             <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h2>
 
-            <time className="is-size-5 mb-5">{date}</time>
-
             <p>{description}</p>
+
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
