@@ -8,7 +8,6 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-
 local_backend: true
 
 media_folder: static/img
@@ -38,12 +37,21 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-single"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime", required: true, time_format: false}
-      - {label: "Event Time", name: "time", widget: "datetime", required: true, picker_utc: false, date_format: false, time_format: true}
+      - {label: "Event Time", name: "time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
       - {label: "Meta Description", name: "description", widget: "text", hint: "Meta descriptions are useful for SEO. This text will NOT show on page. Use Body below for page copy."}
       - {label: "Featured Event", name: "featuredevent", widget: "boolean", required: false}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Link", name: "link", widget: "string"}
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        collapsed: true
+        fields:
+        - {label: "Name", name: "location_name", widget: "string"}
+        - {label: "Street Address", name: "street", widget: "string"}
+        - {label: "City", name: "city", widget: "string"}
+        - {label: "Postal Code", name: "post-code", widget: "string"}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"

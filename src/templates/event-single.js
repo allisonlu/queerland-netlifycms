@@ -5,12 +5,14 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Emoji from '../components/Emoji'
 import Breadcrumb from '../components/Breadcrumb'
 
 export const EventSingleTemplate = ({
   content,
   contentComponent,
   link,
+  address,
   image,
   date,
   time,
@@ -54,6 +56,23 @@ export const EventSingleTemplate = ({
               <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
+            {address != null ? (
+              <div className="mt-6">
+                <h3>
+                  <span className="mr-2">
+                    <Emoji symbol="📍" label="Round pushpin"/>
+                  </span>
+
+                  Location:
+                </h3>
+
+                {address.location_name}<br />
+                {address.street}<br />
+                {address.city + " "}
+                {address.post_code}
+              </div>
+            ) : null }
+
             {tags && tags.length ? (
               <div className="mt-6">
                 <h4>Tags</h4>
@@ -84,6 +103,7 @@ EventSingleTemplate.propTypes = {
   time: PropTypes.string,
   image: PropTypes.object,
   link: PropTypes.string,
+  address: PropTypes.array,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -109,6 +129,7 @@ const EventSingle = ({ data }) => {
         time={post.frontmatter.time}
         image={post.frontmatter.featuredimage}
         link={post.frontmatter.link}
+        address={post.frontmatter.address}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
@@ -135,6 +156,12 @@ export const eventPageQuery = graphql`
         title
         description
         link
+        address {
+          location_name
+          street
+          city
+          post_code
+        }
         tags
         featuredimage {
           publicURL
