@@ -57,22 +57,27 @@ export const EventSingleTemplate = ({
               <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
             ) : null }
 
-            {address != null ? (
-              <div className="mt-6">
-                <h3>
-                  <span className="mr-2">
-                    <Emoji symbol="📍" label="Round pushpin"/>
-                  </span>
 
-                  Location:
-                </h3>
+            <div className="mt-6">
+              <h3>
+                <span className="mr-2">
+                  <Emoji symbol="📍" label="Round pushpin"/>
+                </span>
 
-                {address.location_name}<br />
-                {address.street}<br />
-                {address.city + " "}
-                {address.post_code}
-              </div>
-            ) : null }
+                Location:
+              </h3>
+
+              {address != null ? (
+                <div>
+                  {address.location_name}<br />
+                  {address.street}<br />
+                  {address.city + " "}
+                  {address.post_code}
+                </div>
+              ) : "Online" }
+
+            </div>
+
 
             {tags && tags.length ? (
               <div className="mt-6">

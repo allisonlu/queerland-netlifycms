@@ -46,13 +46,14 @@ collections:
       - {label: "Link", name: "link", widget: "string"}
       - label: "Address"
         name: "address"
+        hint: "Don't enter this information if event is online"
         widget: "object"
         collapsed: true
         fields:
-        - {label: "Name", name: "location_name", widget: "string"}
-        - {label: "Street Address", name: "street", widget: "string"}
-        - {label: "City", name: "city", widget: "string"}
-        - {label: "Postal Code", name: "post-code", widget: "string"}
+        - {label: "Name", name: "location_name", widget: "string", required: false}
+        - {label: "Street Address", name: "street", widget: "string", required: false}
+        - {label: "City", name: "city", widget: "string", required: false}
+        - {label: "Postal Code", name: "post-code", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
