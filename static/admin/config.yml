@@ -8,6 +8,8 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -22,8 +24,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
@@ -35,18 +36,33 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-single"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Event", name: "featuredevent", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Event Date", name: "date", widget: "datetime", required: true, time_format: false}
+      - {label: "Start Time", name: "start_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
+      - {label: "End Time", name: "end_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
+      - {label: "Meta Description", name: "description", widget: "text", hint: "Meta descriptions are useful for SEO. This text will NOT show on page. Use Body below for page copy."}
+      - {label: "Featured Event", name: "featuredevent", widget: "boolean", required: false}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Recording link", name: "recording", widget: "string", required: false}
+      - label: "Address"
+        name: "address"
+        hint: "Don't enter this information if event is online"
+        widget: "object"
+        collapsed: true
+        fields:
+        - {label: "Name", name: "location_name", widget: "string", required: false}
+        - {label: "Street Address", name: "street", widget: "string", required: false}
+        - {label: "City", name: "city", widget: "string", required: false}
+        - {label: "Postal Code", name: "post-code", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
     label: "Pages"
     files:
+
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
@@ -54,10 +70,8 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Body, name: body, widget: markdown}
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -65,17 +79,34 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: "Blurb", name: "blurb", widget: "markdown"}
+              - {label: Photo, name: photo, widget: image}
+
+      - file: "src/pages/resources.md"
+        label: "Resources"
+        name: "resources"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "src/pages/donate.md"
+        label: "Donate"
+        name: "donate"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "donate-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: Tiers
+            name: tiers
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Price, name: price, widget: number}
+              - {label: Description, name: description, widget: markdown}

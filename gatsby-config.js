@@ -5,6 +5,8 @@ module.exports = {
       'QueerLand is a nonprofit dedicated to provide artistic and creative opportunities for LGBTQ+ youth.',
   },
   plugins: [
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sass`,
@@ -34,8 +36,6 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

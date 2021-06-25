@@ -1,0 +1,95 @@
+@import './_colors';
+
+// container
+.donate-tier {
+	position: relative;
+
+	&::before {
+		content: '';
+		background: $mantis;
+		width: 5px;
+		height: 95%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+  // each donate-tier card
+  &__item {
+    width: 100%;
+
+    // for every other donate-tier card, float right
+    &:nth-child(even) {
+      .donate-tier__content {
+        float: right;
+        padding: 50px 30px 10px 30px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          width: 0;
+          height: 0;
+          top: 30px;
+          left: -15px;
+          border-width: 10px 15px 10px 0;
+          border-color: transparent #f5f5f5 transparent transparent;
+        }
+      }
+
+      .donate-tier__price {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    &::after {
+  		content: '';
+  		display: block;
+  		clear: both;
+  	}
+  }
+
+  // donate-tier content
+  &__content {
+  	position: relative;
+    padding: 10px 30px;
+  	width: 45%;
+  	padding: 10px 60px 10px 30px;
+  	border-radius: 4px;
+  	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+  }
+
+  &__title {
+    line-height: normal;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    background-color: $sea;
+    color: white;
+    font-size: 20px;
+  	display: inline-block;
+  	padding: 8px;
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+  }
+
+  // leaf image
+  &__leaf {
+    width: 30px;
+  	height: 30px;
+  	background: $brunswick;
+  	border-radius: 50%;
+  	position: absolute;
+  	left: 50%;
+  	margin-top: 25px;
+  	margin-left: -15px;
+  }
+}

@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import './EventList.scss'
 
 class EventList extends React.Component {
   render() {
@@ -9,48 +11,68 @@ class EventList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="column is-10 is-offset-1">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`event-card is-child block ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="event-card__thumbnail mr-5">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          alt: `Image thumbnail for post ${post.frontmatter.title}`,
                         }}
                       />
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
+                  ) : null }
+
+                  <div>
+
+                    <time>
+                      <div className="event-card__date is-size-5 px-3 has-text-weight-bold">{post.frontmatter.date}</div>
+                      <div className="event-card__time">{post.frontmatter.time}</div>
+                    </time>
+
+                    <div className="mt-4">
+                      <Link
+                        className="event-card__title title is-size-4"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                    </div>
+
+                    {/* don't show button if event occurred in past  */}
+                    {Date.parse(post.frontmatter.date+" 23:59", "yyyy-MM-dd HH:mm:ss") > Date.now() ? (
+                      <a href={post.frontmatter.link} className="interior__button is-link is-medium mt-6">RSVP here</a>
+                    ) : null }
+
+                    {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                      <ul className="post__tags mt-5 ml-0">
+                        {post.frontmatter.tags.map((tag) => (
+                          <li key={tag + `tag`}>
+                            <Link
+                              className="post__tags-link"
+                              to={`/tags/${kebabCase(tag)}/`}
+                            >{tag}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+
+                  </div>
+
                 </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
               </article>
+
+              <span className="section-divider--rainbow"></span>
+
             </div>
           ))}
       </div>
@@ -83,7 +105,8 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "ddd, MMM DD, YYYY")
+                time(formatString: "h:mma")
                 featuredpost
                 featuredimage {
                   childImageSharp {
@@ -92,6 +115,7 @@ export default () => (
                     }
                   }
                 }
+                tags
               }
             }
           }

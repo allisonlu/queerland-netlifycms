@@ -1,19 +1,64 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: About QueerLand
+team:
+  - name: Abbie Phillips
+    position: Founder and board chair
+    blurb: They founded the organization out of a passion for creating safe spaces
+      for queer youth to build confidence, community, and self-efficacy within
+      the arts and they hope to see the organization continue to grow in
+      offering opportunities to support and empower LGBTQ+ youth.
+    photo: https://via.placeholder.com/150
+  - name: Petrina Suggs (she/they)
+    position: Board Vice-chair
+    blurb: As a Black, queer leader in youth programming, they are most passionate
+      about centering the experiences of marginalized youth and advocating for
+      youth leadership development.
+    photo: https://via.placeholder.com/150
+  - name: Shannon Penrose
+    position: Board secretary
+    blurb: Shannon joined the Queerland team because she’s passionate about creating
+      opportunities for the LGBTQ+ community to connect & celebrate the arts.
+    photo: https://via.placeholder.com/150
+  - name: Allison Lu (she/her)
+    position: Treasurer and Finance committee member
+    blurb: She is determined to find intersections of art and tech and break down
+      barriers to entry to create access and opportunity for all.
+    photo: https://via.placeholder.com/150
+  - name: Shana Montañez
+    position: Board and Program development committee member
+    blurb: As a Queer Latina, Artist, and founder of an LGBTQ+ & BIWOC entertainment
+      consulting agency,
+      [@btgntheagency](https://www.instagram.com/btgntheagency/) Shana is ardent
+      about supporting and creating opportunities for the community, especially
+      the next generation. Through the power of representation, community
+      building, equitable opportunities, and mentorship, especially in the arts,
+      Shana looks forward to assisting Queerland in their mission!
+    photo: https://via.placeholder.com/150
+  - name: Jazmin Zimmerman (she/her/hers)
+    blurb: A pansexual, African-American woman with nearly ten years of leadership
+      experience through action, advocacy, and empowerment for vulnerable and
+      marginalized populations.
+    position: Board member
+    photo: https://via.placeholder.com/150
+  - name: Carrie Chen (she/her/they/them)
+    position: Board and Fundraising committee member
+    blurb: A proud, Queer, Taiwanese-American, a life-long artist and creator, and
+      an advocate for BIPOC LGBTQ+ mental health and empowerment. They are a
+      testament to the healing powers of art and community.
+    photo: https://via.placeholder.com/150
+  - name: Raven Moore (she/her)
+    position: Program development intern
+    blurb: Currently finishing her undergrad in Social and Behavioral Sciences with
+      a Psychology minor. She believes that cultural awareness is the foundation
+      to build an intersectional community that promotes personal growth. She
+      joined to promote inclusion, community engagement, mental health, and
+      leadership amongst queer youth.
+    photo: https://via.placeholder.com/150
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+QueerLand is a 100% volunteer and LGBTQ+-run nonprofit dedicated to creating a safe space for the next generation of LGBTQ+ youth artists. Our mission is to empower LGBTQIA+ youth (ages 14–24) by providing life-changing opportunities for queer youth to train in the arts, offering opportunities to perform and showcase their work, offering opportunities to participate in wellness activities and programs, learn about queer culture through our lending library of LGBTQIA+ works (when we have a brick and mortar center) and Q&A panels with queer creators, and have a space to connect with the queer community through arts-oriented social events. 
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+## Team
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Meet the team that works behind the scenes to make all of this possible!

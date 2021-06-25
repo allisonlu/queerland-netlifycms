@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import TeamMember from '../components/TeamMember'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, intro, teamList, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -16,7 +17,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+
+              <PageContent className="content" content={intro} />
+              
+              <TeamMember data={teamList} />
             </div>
           </div>
         </div>
@@ -27,7 +31,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
+  intro: PropTypes.string,
+  teamList: PropTypes.array,
   contentComponent: PropTypes.func,
 }
 
@@ -39,7 +44,8 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        content={post.html}
+        intro={post.html}
+        teamList={post.frontmatter.team}
       />
     </Layout>
   )
@@ -57,6 +63,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        templateKey
+        team {
+          name
+          position
+          blurb
+          photo
+        }
       }
     }
   }

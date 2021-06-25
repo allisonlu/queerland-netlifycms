@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Breadcrumb from '../components/Breadcrumb'
 
 export const BlogPostTemplate = ({
   content,
@@ -12,6 +13,7 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  date,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -22,18 +24,28 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+
+            <Breadcrumb backTo="/blog" />
+
+            <time className="is-size-5 mb-5">{date}</time>
+
+            <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
-            </h1>
+            </h2>
+
             <p>{description}</p>
+
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <ul className="post__tags ml-0">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link
+                        className="post__tags-link"
+                        to={`/tags/${kebabCase(tag)}/`}
+                      >{tag}</Link>
                     </li>
                   ))}
                 </ul>
@@ -51,6 +63,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  date: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -72,6 +85,7 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />

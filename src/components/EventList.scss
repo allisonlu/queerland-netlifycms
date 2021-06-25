@@ -1,0 +1,30 @@
+@import './_colors';
+
+.event-card {
+  position: relative;
+
+  header {
+    display: flex;
+  }
+
+  &__thumbnail {
+    flex-basis: 50%;
+  }
+
+  &__date {
+    display: inline-block;
+    background-color: $primary;
+    color: white;
+  }
+
+  &__title {
+    color: $primary;
+    text-decoration: underline;
+    margin-top: 100px;
+
+    &:hover {
+      color: $white;
+      background-color: $hover;
+    }
+  }
+}
