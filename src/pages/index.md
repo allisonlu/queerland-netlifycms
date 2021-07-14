@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: QueerLand
-image: /img/tanushree-rao-xqpni9wh0ck-unsplash.jpg
+image: /img/queerland-rainbow-banner.png
 heading: Welcome to QueerLand
 subheading: Providing queer youth with opportunities in the arts since April 2021
 ---
