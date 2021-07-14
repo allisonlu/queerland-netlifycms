@@ -13,7 +13,7 @@ const TeamMember = ({ data }) => (
                 <figure className="image is-96x96">
                   <img
                     className="is-rounded"
-                    src={person.photo}
+                    src={person.photo.publicURL}
                     alt={person.name} />
                 </figure>
               </div>

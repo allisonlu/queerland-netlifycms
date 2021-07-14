@@ -19,7 +19,7 @@ export const AboutPageTemplate = ({ title, intro, teamList, contentComponent }) 
               </h2>
 
               <PageContent className="content" content={intro} />
-              
+
               <TeamMember data={teamList} />
             </div>
           </div>
@@ -68,7 +68,9 @@ export const aboutPageQuery = graphql`
           name
           position
           blurb
-          photo
+          photo {
+            publicURL
+          }
         }
       }
     }
