@@ -50,7 +50,7 @@
     &:hover {
       color: $primary;
     }
-    
+
     &:active {
       color: $active;
     }
@@ -115,8 +115,7 @@ a.breadcrumb__link {
   }
 }
 
-
-// Helper Classes
+// for banner hero images
 .full-width-image-container {
   width: 100vw;
   height: 400px;
@@ -126,16 +125,6 @@ a.breadcrumb__link {
   margin: 0em -50vw;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.full-width-image {
-  width: 100vw;
-  height: 400px;
-  background-size: cover;
-  background-position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
