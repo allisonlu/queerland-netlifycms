@@ -129,3 +129,8 @@ a.breadcrumb__link {
   justify-content: center;
   align-items: center;
 }
+
+// override bulma style
+.image.is-height-auto {
+  height: auto;
+}
