@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
         className="full-width-image-container mt-0"
         style={{
           backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image.publicURL
           })`,
         }}
       >
