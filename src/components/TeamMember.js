@@ -10,10 +10,10 @@ const TeamMember = ({ data }) => (
           <div className="card-content">
             <div className="media">
               <div className="media-left">
-                <figure className="image is-96x96">
+                <figure className="image is-96x96 is-height-auto">
                   <img
                     className="is-rounded"
-                    src={person.photo}
+                    src={person.photo.publicURL}
                     alt={person.name} />
                 </figure>
               </div>

@@ -50,7 +50,7 @@
     &:hover {
       color: $primary;
     }
-    
+
     &:active {
       color: $active;
     }
@@ -115,8 +115,7 @@ a.breadcrumb__link {
   }
 }
 
-
-// Helper Classes
+// for banner hero images
 .full-width-image-container {
   width: 100vw;
   height: 400px;
@@ -131,12 +130,7 @@ a.breadcrumb__link {
   align-items: center;
 }
 
-.full-width-image {
-  width: 100vw;
-  height: 400px;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// override bulma style
+.image.is-height-auto {
+  height: auto;
 }

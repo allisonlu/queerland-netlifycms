@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
     <div>
 
       <section
-        className="full-width-image mt-0"
+        className="full-width-image-container mt-0"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
       </section>
 
       <section className="section">
-        <div className="content column is-10 is-offset-3">
+        <div className="content column is-8 is-offset-3">
             <h3 className="has-text-weight-semibold is-size-2">
               {heading}
             </h3>
@@ -57,7 +57,7 @@ export const IndexPageTemplate = ({
 
       <section className="section">
         <div className="content">
-          <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
+          <h3 className="has-text-weight-semibold is-size-2 column is-8 is-offset-2">
             Latest events
           </h3>
 
@@ -80,7 +80,7 @@ export const IndexPageTemplate = ({
 
       <section className="section">
         <div className="content">
-          <h3 className="has-text-weight-semibold is-size-2 column is-10 is-offset-3">
+          <h3 className="has-text-weight-semibold is-size-2 column is-8 is-offset-2">
             News & Updates
           </h3>
 
@@ -142,11 +142,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          publicURL
         }
         heading
         subheading
