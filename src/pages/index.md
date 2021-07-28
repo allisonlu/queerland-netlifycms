@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
 title: QueerLand
-image: /img/queerland-rainbow-banner.png
+image: /img/rainbow-flag-glitter.jpg
 heading: Welcome to QueerLand
-subheading: Providing queer youth with opportunities in the arts since April 2021
+subheading: Established January 2021
 ---
 Here in QueerLand, we are building a better world for the LGBTQIA+ community by uplifting and educating our next generations youth through the celebration and creation of LGBTQIA+ culture. QueerLand, a nonprofit youth community center based in Los Angeles, exists to empower and provide LGBTQIA+ youth (ages 14-25) with a restorative space that celebrates queer culture and offers opportunities to learn artistic crafts, perform and showcase their craft, participate in wrap-around wellness programs, and connect with their queer community in a sober space. 
 
