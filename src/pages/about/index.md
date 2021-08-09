@@ -9,7 +9,7 @@ team:
       for queer youth to build confidence, community, and self-efficacy within
       the arts and they hope to see the organization continue to grow in
       offering opportunities to support and empower LGBTQ+ youth.
-    photo: /img/img_6703.jpg
+    photo: /img/pxl_20210809_205036683.mp.jpg
   - name: Petrina Suggs (she/they)
     position: Board Vice-chair
     blurb: As a Black, queer leader in youth programming, they are most passionate
