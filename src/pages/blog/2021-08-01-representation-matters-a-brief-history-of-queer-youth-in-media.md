@@ -10,11 +10,10 @@ description: >
   Generation, a sitcom about a multiracial group of queer youths in Los Angeles.
   And HBO also dropped the trailer for the much-anticipated, pandemic-delayed
   second season of its other show about multiracial queer youths in Los Angeles,
-  the massive hit Euphoria.Weeks after Pride Month ended, there was the debut of
-  the new Gossip Girl, which followed tradition of other recent reboots of
-  millennial nostalgia properties (such as Peacock’s Saved By the Bell reboot
-  and Netflix’s recent updates of The Baby-Sitters’ Club and She-Ra) by adding
-  queer characters to the mix.
+  the massive hit Euphoria.
+
+
+  Weeks after Pride Month ended, there was the debut of the new Gossip Girl, which followed tradition of other recent reboots of millennial nostalgia properties (such as Peacock’s Saved By the Bell reboot and Netflix’s recent updates of The Baby-Sitters’ Club and She-Ra) by adding queer characters to the mix.
 
 
   In general, queer youth have never been better represented in popular culture. Portrayals of LGBTQ+ young people, and of queer-inclusive storylines aimed at young viewers, run the gamut from dark and gritty teen shows like Euphoria to children’s cartoons such such as Steven Universe.
@@ -27,8 +26,27 @@ description: >
 
 
   The growing visibility of LGBTQ+ youth in popular culture and growing attacks on LGBTQ+ youth in state legislatures are closely related. Much of the rhetoric of anti-LGBTQ+ politicians is premised on erasing queer youth from existence. This is a strategy that goes back to the godmother of the anti-LGBTQ+ movement, Anita Bryant.
+featuredimage: /img/op.jpeg
 ---
+Pride Month 2021 was a good time to be a young LGBTQ+ person, at least on TV and the various streaming apps. Hulu premiered season 2 of Love, Victor, a spinoff of the hit film Love, Simon about a gay teenager navigating high school in wealthy suburban Atlanta. HBO Max released new episodes of Generation, a sitcom about a multiracial group of queer youths in Los Angeles. And HBO also dropped the trailer for the much-anticipated, pandemic-delayed second season of its other show about multiracial queer youths in Los Angeles, the massive hit Euphoria.
+
+![](/img/63dfece51c4e133c9facdb1b43f2a5e4c8-love-victor-season-2-ep-01.2x.rsocial.w600.jpg)
+
+![](/img/https___culturess.com_files_image-exchange_2018_08_ie_61250.jpeg)
+
+Weeks after Pride Month ended, there was the debut of the new Gossip Girl, which followed tradition of other recent reboots of millennial nostalgia properties (such as Peacock’s Saved By the Bell reboot and Netflix’s recent updates of The Baby-Sitters’ Club and She-Ra) by adding queer characters to the mix.
+
+In general, queer youth have never been better represented in popular culture. Portrayals of LGBTQ+ young people, and of queer-inclusive storylines aimed at young viewers, run the gamut from dark and gritty teen shows like Euphoria to children’s cartoons such such as Steven Universe.
+
+But at the same time, in the real world, it is a much scarier time to be a young LGBTQ+ person. States such as Tennessee and Arizona are passing new laws meant to restrict even mentioning LGBTQ+ topics in school. Dozens of states have considered or passed laws banning LGBTQ+ kids from participating in school sports. And states such as Arkansas are trying to ban gender-affirming youth for trans young people altogether. 
+
+All told, 2021 saw more anti-LGBTQ+ laws proposed or passed in state legislatures across the country than any other year in recent memory. And many of these laws particularly target queer youth.
+
+The growing visibility of LGBTQ+ youth in popular culture and growing attacks on LGBTQ+ youth in state legislatures are closely related. Much of the rhetoric of anti-LGBTQ+ politicians is premised on erasing queer youth from existence. This is a strategy that goes back to the godmother of the anti-LGBTQ+ movement, Anita Bryant.
+
 **I’m Here to Recruit You**
+
+![](/img/anita.png)
 
 If you know anything about queer history, you are probably familiar with Anita Bryant, the Miss America-turned-orange juice spokeswoman who became the fact of anti-LGBTQ+ bigotry in the 1970s. After the turning point of the Stonewall Riots led to a burst of organizing for what were then referred to as “gay rights” in the early to mid-70s, Bryant became the face of the backlash when she successfully led a campaign to overturn pro-gay civil rights ordinance in Miami in 1977.
 
@@ -55,11 +73,11 @@ Largely thanks to the success of Bryant’s messaging, queer youth were rendered
 
 For example, the 1990s featured several big breakthrough moments in queer representation (Ellen’s coming out, a lesbian wedding on Friends), but they almost always featured queer adults, not young people. In this context, the character of Christian, the “disco-dancing, Oscar Wilde-reading, Streisand-ticket holding Friend of Dorothy” in Amy Heckerling’s 90s teen classic Clueless is the exception that proves the rule. Christian is the rare queer teenager in a mainstream teen film of the time, but his mere presence as an out gay teen is used mostly as a joke and a way to signify the cultural sophistication of the wealthy Beverly Hills high school where the film was set.
 
+![](/img/clueless.jpeg)
+
 The 90s, though, did start to present some representations of queer teens, if you knew where to look. If an enterprising queer teenager explored the furthest nether regions of their local Blockbuster video, they could find indie films like Jamie Babbit’s But I’m a Cheerleader or Greg Araki’s Teenage Apocalypse Trilogy (Totally F\*\*\*\*d Up, The Doom Generation, and Nowhere). But the relative obscurity of these films only served to highlight the overall lack of representation.
 
 The 2000s were not much better. Queer storylines were occasionally trotted out as attention-grabbing stunts (such as Marissa Cooper’s brief bicurious phase with guest star Olivia Wilde in season 2 of The O.C.) and there were interesting representations happening at the margins (such as Araki’s award-winning Kaboom!). But for the most part, queer young people did not exist in mainstream popular culture.
-
-
 
 **The Ryan Murphy Revolution**
 
@@ -92,8 +110,6 @@ Participants in the course will have access to:
 * An end-of semester Zoom open house in which participants will have the opportunity to share the work they created over the course of the semester.
 
 **Head to https://www.patreon.com/QueerLand to become a supporter today and get access to this amazing learning opportunity!!** 
-
-
 
 **About the Author**
 
