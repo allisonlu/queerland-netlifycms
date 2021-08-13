@@ -21,4 +21,6 @@ We're so excited to announce we can provide materials for this event! RSVP now, 
 
 **If you snooze and aren't one of the first ten, be sure to bring along the above items!** Don't worry about items to paint; we've got you! 
 
+**RSVP here:** https://www.eventbrite.com/e/painting-in-griffith-park-with-queerland-tickets-165160667001
+
 This event is hosted by [QueerLand](<>); an arts-focused, youth community center focused on empowering LGBTQIA+ young adults (14-25) by providing opportunities in the arts through free workshops, performance opportunities, and social events! Follow us on [Instagram](<>) or [Facebook](<>) for more information & updates on future events, and feel free to support our work on [Patreon](<>)!
