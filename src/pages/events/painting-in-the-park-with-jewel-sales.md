@@ -21,4 +21,6 @@ We're so excited to announce we can provide materials for this event! RSVP now, 
 
 **If you snooze and aren't one of the first ten, be sure to bring along the above items!** Don't worry about items to paint; we've got you! 
 
- Check out Jewels' work on Instagram, @jewelsalesart, and on Jewels' [website](<>)!
+ Check out Jewels' work on Instagram, @jewelsalesart, and on Jewels' [website](<>)!\
+\
+**\*\**COVID-19 Policy: Bring your vaccination cards or a same-day negative COVID test and mask for entry to this event. We ask that you keep masks on at all times. We thank you for helping us keep each other safe at this community gathering.**
