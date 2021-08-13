@@ -7,14 +7,10 @@ description: QueerLand Open Mic @ Spoke & Weal WeHo, August 29 @ 6:30pm
 featuredimage: /img/screen-shot-2021-08-12-at-3.02.55-pm.png
 link: NA
 ---
-QueerLand is hosting another open mic @spokeandwealla! !! Join us August 29th at 6:30pm for a night of spoken word, music, and comedy. All attendees are welcome to perform :) 
+QueerLand is hosting another open mic at Spoke & Weal LA!! Join us August 29th at 6:30pm for a night of spoken word, music, and comedy. All attendees are welcome to perform :) 
 
-MAJOR thank you to @spokeandweal for offering up their space to us again, we so appreciate the home they provide to us <3
+MAJOR thank you to Spoke & Weal for offering up their space to us again, we so appreciate the home they provide to QueerLand! <3
 
- We had over 40 attendees at our last open mic, so be sure to reserve your ticket now!
+ We had over 40 attendees at our last open mic, so be sure to [reserve your ticket here now!](https://www.eventbrite.com/e/queerland-open-mic-spoke-weal-weho-tickets-164869945445)
 
-**RSVP here:** https://www.eventbrite.com/e/queerland-open-mic-spoke-weal-weho-tickets-164869945445
-
-\*\*\*\*Updated COVID Policy: We will be following local LA County COVID-19 guidelines; please bring your mask, as this is an indoor event! 
-
-This event is hosted by QueerLand; an arts-focused, youth community center focused on empowering LGBTQIA+ young adults (14-25) by providing opportunities in the arts through free workshops, performance opportunities, and social events! Follow us on instagram, @queerlandcenter, to learn  about our upcoming events!
+\*\**COVID-19 Policy: Bring your vaccination cards or a same-day negative COVID test and mask for entry to this event. We ask that you keep masks on at all times. We thank you for helping us keep each other safe at this community gathering.
