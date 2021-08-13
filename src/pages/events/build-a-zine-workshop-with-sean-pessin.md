@@ -13,4 +13,6 @@ link: https://asu.zoom.us/j/9928001198
 
 About your workshop host: Sean Pessin (he/they) is a founding co-editor of agape: a journal of literary good will, an editor-at-large for Magra Books, on the board of Les Figues Press, and a collaborator of Red Right Hand Press. He is currently a Professor at California State University or Northridge and teaches the literary magazine course each semester: The Northridge Review.
 
+**RSVP here:** https://www.eventbrite.com/e/build-a-zine-workshop-with-sean-pessin-tickets-165971686783
+
 This event is hosted by QueerLand; an arts-focused, youth community center focused on empowering LGBTQIA+ young adults (14-25) by providing opportunities in the arts through free workshops, performance opportunities, and social events! Follow us on Instagram, @queerland.center, to learn more about our upcoming events!
