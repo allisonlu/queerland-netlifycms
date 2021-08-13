@@ -13,6 +13,8 @@ MAJOR thank you to @spokeandweal for offering up their space to us again, we so 
 
  We had over 40 attendees at our last open mic, so be sure to reserve your ticket now!
 
+**RSVP here:** https://www.eventbrite.com/e/queerland-open-mic-spoke-weal-weho-tickets-164869945445
+
 \*\*\*\*Updated COVID Policy: We will be following local LA County COVID-19 guidelines; please bring your mask, as this is an indoor event! 
 
 This event is hosted by QueerLand; an arts-focused, youth community center focused on empowering LGBTQIA+ young adults (14-25) by providing opportunities in the arts through free workshops, performance opportunities, and social events! Follow us on instagram, @queerlandcenter, to learn  about our upcoming events!
