@@ -11,7 +11,7 @@ Join QueerLand for Septembers' Book Club and read "A Queer History of the U.S. f
 
 David Boyles (he/him) teaches writing at Arizona State University. He is a co-founder and current President of Drag Story Hour Arizona and also sits on the Board of Directors of the national Drag Queen Story Hour organization. Since its founding in 2019, Drag Story Hour Arizona has presented queer-inclusive family story hours hosted by drag performers at libraries, bookstores, museums, and colleges around Arizona. In 2020, David co-founded Virtual Arizona Pride, which has been presenting virtual programming for the Arizona LGBTQ+ community for the past year in order to fill the gap created by cancellation of in-person Pride events. He is passionate about supporting queer youth and creating spaces where youth can celebrate their identities and learn about queer art, culture, and history.
 
-**RSVP here:** https://www.eventbrite.com/myevent?eid=165176235567 
+**RSVP here:** https://www.eventbrite.com/e/a-queer-history-of-the-us-for-young-people-queerland-book-club-part-2-tickets-165176235567
 
 **Follow us on [Instagram](<>) to follow along with our reading schedule and discussion polls to get the most out of joining QueerLands' book club!**
 
