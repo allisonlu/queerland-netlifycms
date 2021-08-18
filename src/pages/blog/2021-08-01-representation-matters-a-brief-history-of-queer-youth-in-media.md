@@ -26,11 +26,11 @@ description: >
 
 
   The growing visibility of LGBTQ+ youth in popular culture and growing attacks on LGBTQ+ youth in state legislatures are closely related. Much of the rhetoric of anti-LGBTQ+ politicians is premised on erasing queer youth from existence. This is a strategy that goes back to the godmother of the anti-LGBTQ+ movement, Anita Bryant.
-featuredimage: /img/basic-banner.jpg
+featuredimage: /img/63dfece51c4e133c9facdb1b43f2a5e4c8-love-victor-season-2-ep-01.2x.rsocial.w600.jpg
 ---
-Pride Month 2021 was a good time to be a young LGBTQ+ person, at least on TV and the various streaming apps. Hulu premiered season 2 of Love, Victor, a spinoff of the hit film Love, Simon about a gay teenager navigating high school in wealthy suburban Atlanta. HBO Max released new episodes of Generation, a sitcom about a multiracial group of queer youths in Los Angeles. And HBO also dropped the trailer for the much-anticipated, pandemic-delayed second season of its other show about multiracial queer youths in Los Angeles, the massive hit Euphoria.
 
-![](/img/63dfece51c4e133c9facdb1b43f2a5e4c8-love-victor-season-2-ep-01.2x.rsocial.w600.jpg)
+
+![]()
 
 ![](/img/https___culturess.com_files_image-exchange_2018_08_ie_61250.jpeg)
 
