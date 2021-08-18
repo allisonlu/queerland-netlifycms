@@ -2,7 +2,7 @@
 templateKey: event-single
 title: Open Mic at Spoke & Weal WeHo
 date: 2021-08-29T19:01:37.414Z
-time: 2021-08-12T22:30:37.427Z
+time: 2021-08-12T18:30:37.427Z
 description: QueerLand Open Mic @ Spoke & Weal WeHo, August 29 @ 6:30pm
 featuredimage: /img/screen-shot-2021-08-12-at-3.02.55-pm.png
 link: NA
