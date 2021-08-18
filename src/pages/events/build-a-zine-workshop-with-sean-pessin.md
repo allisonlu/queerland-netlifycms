@@ -2,7 +2,7 @@
 templateKey: event-single
 title: Build-A-Zine Workshop with Sean Pessin
 date: 2021-08-19T18:57:20.476Z
-time: 2021-08-13T01:00:00.000Z
+time: 2021-08-12T18:00:00.000Z
 description: Build-A-Zine with Professor Sean Pessin
 featuredimage: /img/screen-shot-2021-08-12-at-2.59.10-pm.png
 link: https://www.eventbrite.com/e/165971686783
