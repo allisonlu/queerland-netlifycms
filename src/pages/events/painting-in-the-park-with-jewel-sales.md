@@ -2,7 +2,7 @@
 templateKey: event-single
 title: Painting in the Park with Jewel Sales
 date: 2021-09-09T19:03:53.467Z
-time: 2021-08-13T00:30:53.479Z
+time: 2021-08-12T17:30:53.479Z
 description: Painting in the Park with Jewel Sales on Thursday, September 9, at 5:30pm PST!
 featuredimage: /img/screen-shot-2021-08-12-at-3.05.16-pm.png
 link: https://www.eventbrite.com/e/164869945445
