@@ -2,7 +2,7 @@
 templateKey: event-single
 title: '"A Queer History of the U.S. for Young People" QueerLand Book Club: Part 2!'
 date: 2021-09-22T19:05:47.071Z
-time: 2021-08-13T01:00:47.090Z
+time: 2021-08-12T18:00:47.090Z
 description: '"A Queer History of the U.S. for Young People" Book Club: Part 2'
 featuredimage: /img/screen-shot-2021-08-12-at-3.06.58-pm.png
 link: https://www.eventbrite.com/e/a-queer-history-of-the-us-for-young-people-queerland-book-club-part-2-tickets-165176235567
