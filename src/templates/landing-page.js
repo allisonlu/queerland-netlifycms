@@ -11,21 +11,20 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
     <div>
 
       {image != null ? (
-        <section 
-          className="full-width-image-container mt-0"
-          style={{
-            backgroundImage: `url(${ image.publicURL })`,
-          }}
+        <div 
+          className="hero-container mt-0"
           >
-        </section>
-      ) : null}
+            <img src= {`${ image.publicURL }`} />
+        </div>
+      ) : null
+      }
 
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                <h2 className="title is-size-2 has-text-weight-bold is-bold-light ribbon">
                   {title}
                 </h2>
 
