@@ -23,14 +23,13 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="section">
+
                 <h2 className="title is-size-2 has-text-weight-bold is-bold-light ribbon">
                   {title}
                 </h2>
 
                 <PageContent className="content" content={body} />
 
-              </div>
             </div>
           </div>
         </div>
