@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import DonateButton from '../components/DonateButton'
 import MarkdownContent from '../components/MarkdownContent'
 import './DonateTier.scss'
 

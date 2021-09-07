@@ -17,7 +17,10 @@ export const EventPageTemplate = ({ title, image, body, contentComponent }) => {
         <div 
           className="hero-container mt-0"
           >
-            <img src= {`${ image.publicURL }`} />
+            <img 
+              src= {`${ image.publicURL }`} 
+              alt= ""
+            />
         </div>
       ) : null
       }

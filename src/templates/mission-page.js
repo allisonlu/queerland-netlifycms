@@ -15,7 +15,10 @@ export const MissionPageTemplate = ({ title, image,  intro, teamList, contentCom
         <div 
           className="hero-container mt-0"
           >
-            <img src= {`${ image.publicURL }`} />
+            <img 
+              src= {`${ image.publicURL }`} 
+              alt= ""
+            />
         </div>
       ) : null
       }
