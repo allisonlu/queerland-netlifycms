@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import TeamMember from '../components/TeamMember'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, image,  intro, teamList, contentComponent }) => {
+export const MissionPageTemplate = ({ title, image,  intro, teamList, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -43,7 +43,7 @@ export const AboutPageTemplate = ({ title, image,  intro, teamList, contentCompo
   )
 }
 
-AboutPageTemplate.propTypes = {
+MissionPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   intro: PropTypes.string,
@@ -51,12 +51,12 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const MissionPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <MissionPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
@@ -67,14 +67,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+MissionPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default MissionPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const missionPageQuery = graphql`
+  query MissionPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

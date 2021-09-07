@@ -72,11 +72,11 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Body, name: body, widget: markdown}
 
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/mission/index.md"
+        label: "Mission"
+        name: "mission"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mission-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: Banner image, name: image, widget: image}
           - {label: "Body", name: "body", widget: "markdown"}

@@ -1,6 +1,6 @@
 ---
-templateKey: about-page
-path: /about
+templateKey: mission-page
+path: /mission
 title: About QueerLand
 image: /img/queerland-rainbow-banner.png
 team:
