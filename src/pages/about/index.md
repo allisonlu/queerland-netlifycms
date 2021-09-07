@@ -2,6 +2,7 @@
 templateKey: about-page
 path: /about
 title: About QueerLand
+image: /img/queerland-rainbow-banner.png
 team:
   - name: Abbie Phillips (They/Them/Theirs)
     position: Founder and Board Chair
