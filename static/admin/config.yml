@@ -37,8 +37,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-single"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime", required: true, time_format: false}
-      - {label: "Start Time", name: "start_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
-      - {label: "End Time", name: "end_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
+      - {label: "Start Time", name: "start_time", widget: "datetime", required: true, date_format: false, time_format: true}
+      - {label: "End Time", name: "end_time", widget: "datetime", required: true, date_format: false, time_format: true}
       - {label: "Meta Description", name: "description", widget: "text", hint: "Meta descriptions are useful for SEO. This text will NOT show on page. Use Body below for page copy."}
       - {label: "Featured Event", name: "featuredevent", widget: "boolean", required: false}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
