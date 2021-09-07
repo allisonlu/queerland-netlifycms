@@ -10,7 +10,6 @@ address:
   street: 8211 West 3rd Street
   city: Los Angeles, CA
   post-code: "90048"
-start-time: 2021-06-24T18:30:15.061Z
 title: "QueerLand Open Mic at Spoke & Weal "
 description: >
   June’s Open Mic Night was incredible! We had an amazing mix of musicians and
@@ -53,7 +52,6 @@ tags:
   - lapride
   - performance
   - comedy
-end-time: 2021-06-24T20:00:38.675Z
 ---
 Come out and enjoy an amazing **free** evening of queer poetry, art, spoken word, along with vocalist, musicians and talented singers for pride month!
 
