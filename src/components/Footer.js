@@ -30,8 +30,8 @@ const Footer = class extends React.Component {
               </Link>
             </li>
             <li className="footer__menu-item">
-              <Link className="footer__menu-link" to="/about">
-                About
+              <Link className="footer__menu-link" to="/mission">
+                Mission
               </Link>
             </li>
             <li className="footer__menu-item">
