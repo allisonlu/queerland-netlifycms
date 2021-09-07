@@ -88,11 +88,11 @@ collections:
               - {label: "Blurb", name: "blurb", widget: "markdown"}
               - {label: Photo, name: photo, widget: image}
 
-      - file: "src/pages/events-landing.md"
+      - file: "src/pages/events.md"
         label: "Events"
-        name: "events-landing"
+        name: "events"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Body, name: body, widget: markdown}
