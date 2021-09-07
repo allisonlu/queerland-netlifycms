@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import BlogRoll from '../components/BlogRoll'
 
-export const LandingPageTemplate = ({ title, image, body, contentComponent }) => {
+export const BlogPageTemplate = ({ title, image, body, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -33,6 +34,10 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
 
                 <PageContent className="content" content={body} />
 
+                <span className="section-divider--rainbow"></span>
+
+                <BlogRoll />
+
             </div>
           </div>
         </div>
@@ -42,19 +47,19 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
   )
 }
 
-LandingPageTemplate.propTypes = {
+BlogPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   body: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const LandingPage = ({ data }) => {
+const BlogPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <LandingPageTemplate
+      <BlogPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
@@ -64,14 +69,14 @@ const LandingPage = ({ data }) => {
   )
 }
 
-LandingPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default LandingPage
+export default BlogPage
 
-export const landingPageQuery = graphql`
-  query LandingPage($id: String!) {
+export const blogPageQuery = graphql`
+  query BlogPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

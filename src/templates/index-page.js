@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
       </section>
 
       <section className="section">
-        <div className="content column is-8 is-offset-3">
+        <div className="content is-8 is-offset-3">
             <h3 className="has-text-weight-semibold is-size-2">
               {heading}
             </h3>

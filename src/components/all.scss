@@ -8,7 +8,8 @@
   margin-bottom: 0em;
   padding: 2em 0;
 
-  &::after, &::before {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -24,8 +25,7 @@
   }
 
   &::after {
-    background: linear-gradient(
-        to right,
+    background: linear-gradient(to right,
         #9C4F96 5%,
         #FF6355 15%,
         #FF6355 25%,
@@ -128,6 +128,24 @@ a.breadcrumb__link {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-container {
+  &>img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+
+    @media (min-width: 768px) {
+      height: 400px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 500px;
+    }
+  }
 }
 
 // override bulma style

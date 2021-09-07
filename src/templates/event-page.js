@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import EventList from '../components/EventList'
+import DisplayCalendar from '../components/DisplayCalendar'
 
-export const LandingPageTemplate = ({ title, image, body, contentComponent }) => {
+
+export const EventPageTemplate = ({ title, image, body, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -33,6 +36,12 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
 
                 <PageContent className="content" content={body} />
 
+                <DisplayCalendar />
+
+                <span className="section-divider--rainbow"></span>
+
+                <EventList />
+
             </div>
           </div>
         </div>
@@ -42,19 +51,19 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
   )
 }
 
-LandingPageTemplate.propTypes = {
+EventPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   body: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const LandingPage = ({ data }) => {
+const EventPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <LandingPageTemplate
+      <EventPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
@@ -64,14 +73,14 @@ const LandingPage = ({ data }) => {
   )
 }
 
-LandingPage.propTypes = {
+EventPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default LandingPage
+export default EventPage
 
-export const landingPageQuery = graphql`
-  query LandingPage($id: String!) {
+export const eventPageQuery = graphql`
+  query EventPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

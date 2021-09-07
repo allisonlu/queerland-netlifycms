@@ -13,9 +13,9 @@ class BlogRoll extends React.Component {
       <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-8 is-offset-2" key={post.id}>
+            <div className="is-8 is-offset-2" key={post.id}>
               <article
-                className="blog__post is-child"
+                className="blog__post"
               >
 
                 {post.frontmatter.featuredimage ? (

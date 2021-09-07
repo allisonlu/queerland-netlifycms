@@ -37,8 +37,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-single"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Event Date", name: "date", widget: "datetime", required: true, time_format: false}
-      - {label: "Start Time", name: "start_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
-      - {label: "End Time", name: "end_time", widget: "datetime", required: true, picker_utc: true, date_format: false, time_format: true}
+      - {label: "Start Time", name: "start_time", widget: "datetime", required: true, date_format: false, time_format: true}
+      - {label: "End Time", name: "end_time", widget: "datetime", required: true, date_format: false, time_format: true}
       - {label: "Meta Description", name: "description", widget: "text", hint: "Meta descriptions are useful for SEO. This text will NOT show on page. Use Body below for page copy."}
       - {label: "Featured Event", name: "featuredevent", widget: "boolean", required: false}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
@@ -72,12 +72,13 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Body, name: body, widget: markdown}
 
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/mission/index.md"
+        label: "Mission"
+        name: "mission"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "mission-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: Banner image, name: image, widget: image}
           - {label: "Body", name: "body", widget: "markdown"}
           - label: Team
             name: team
@@ -87,6 +88,24 @@ collections:
               - {label: Position, name: position, widget: string}
               - {label: "Blurb", name: "blurb", widget: "markdown"}
               - {label: Photo, name: photo, widget: image}
+
+      - file: "src/pages/events.md"
+        label: "Events"
+        name: "events"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Body, name: body, widget: markdown}
+
+      - file: "src/pages/blog.md"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Body, name: body, widget: markdown}
 
       - file: "src/pages/resources.md"
         label: "Resources"

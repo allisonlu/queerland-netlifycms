@@ -25,98 +25,104 @@ export const EventSingleTemplate = ({
   const EventContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+    <div>
+      {image != null ? (
+        <div 
+          className="hero-container mt-0"
+          >
+            <img 
+              src= {`${ image.publicURL }`} 
+              alt= ""
+            />
+        </div>
+      ) : null
+      }
 
-            {image != null ? (
-              <div
-                className="full-width-image-container mt-0"
-                style={{
-                  backgroundImage: `url( ${image.publicURL})`
-                }}
-              ></div>
-            ) : null }
+      <section className="section">
+        {helmet || ''}
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
 
-            <Breadcrumb backTo="/events" />
+              <Breadcrumb backTo="/events" />
 
-            <time className="is-size-5">
-              {date}<br/>
-              {start} – {end}
-            </time>
+              <time className="is-size-5">
+                {date}<br/>
+                {start} – {end}
+              </time>
 
-            <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h2>
+              <h2 className="title is-size-2 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
 
-            <EventContent content={content} />
+              <EventContent content={content} />
 
-            {/* don't show button if event occurred in past  */}
-            {Date.parse(date+" "+end, "yyyy-MM-dd HH:mm:ss") > Date.now() ? (
-              <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
-            ) : null }
+              {/* don't show button if event occurred in past  */}
+              {Date.parse(date+" "+end, "yyyy-MM-dd HH:mm:ss") > Date.now() ? (
+                <a href={link} className="interior__button is-link is-medium mt-6">RSVP here</a>
+              ) : null }
 
-            <div className="mt-6">
-              <h3>
-                <span className="mr-2">
-                  <Emoji symbol="📍" label="Round pushpin"/>
-                </span>
+              <div className="mt-6">
+                <h3>
+                  <span className="mr-2">
+                    <Emoji symbol="📍" label="Round pushpin"/>
+                  </span>
 
-                Location:
-              </h3>
+                  Location:
+                </h3>
 
-              {address != null ? (
+                {address != null ? (
+                  <div>
+                    {address.location_name}<br />
+                    {address.street}<br />
+                    {address.city + " "}
+                    {address.post_code}
+                  </div>
+                ) : "Online" }
+
+              </div>
+
+              {recording != null ? (
                 <div>
-                  {address.location_name}<br />
-                  {address.street}<br />
-                  {address.city + " "}
-                  {address.post_code}
+                  <h3 className="mt-5">Recording:</h3>
+
+                  <iframe
+                    width="560"
+                    height="315"
+                    src={"https://www.youtube.com/embed/" + recording.substring(32)}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer;
+                    autoplay; clipboard-write;
+                    encrypted-media; gyroscope;
+                    picture-in-picture" allowfullscreen
+                  ></iframe>
                 </div>
-              ) : "Online" }
+              ) : null }
+
+
+              {tags && tags.length ? (
+                <div className="mt-6">
+                  <h4>Tags</h4>
+                  <ul className="post__tags ml-0">
+                    {tags.map((tag) => (
+                      <li key={tag + `tag`}>
+                        <Link
+                          className="post__tags-link"
+                          to={`/tags/${kebabCase(tag)}/`}
+                        >{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
 
             </div>
-
-            {recording != null ? (
-              <div>
-                <h3 className="mt-5">Recording:</h3>
-
-                <iframe
-                  width="560"
-                  height="315"
-                  src={"https://www.youtube.com/embed/" + recording.substring(32)}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer;
-                  autoplay; clipboard-write;
-                  encrypted-media; gyroscope;
-                  picture-in-picture" allowfullscreen
-                ></iframe>
-              </div>
-            ) : null }
-
-
-            {tags && tags.length ? (
-              <div className="mt-6">
-                <h4>Tags</h4>
-                <ul className="post__tags ml-0">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link
-                        className="post__tags-link"
-                        to={`/tags/${kebabCase(tag)}/`}
-                      >{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
   )
 }
 

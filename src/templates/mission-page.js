@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import TeamMember from '../components/TeamMember'
 import Content, { HTMLContent } from '../components/Content'
 
-export const LandingPageTemplate = ({ title, image, body, contentComponent }) => {
+export const MissionPageTemplate = ({ title, image,  intro, teamList, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -26,59 +27,72 @@ export const LandingPageTemplate = ({ title, image, body, contentComponent }) =>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-
-                <h2 className="mb-5 is-size-2 has-text-weight-bold is-bold-light ribbon">
+              <div className="section">
+                <h2 className="mb-5 is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
 
-                <PageContent className="content" content={body} />
+                <PageContent className="content" content={intro} />
 
+                <TeamMember data={teamList} />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
     </div>
+
   )
 }
 
-LandingPageTemplate.propTypes = {
+MissionPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
-  body: PropTypes.string,
+  intro: PropTypes.string,
+  teamList: PropTypes.array,
   contentComponent: PropTypes.func,
 }
 
-const LandingPage = ({ data }) => {
+const MissionPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <LandingPageTemplate
+      <MissionPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
-        body={post.html}
+        intro={post.html}
+        teamList={post.frontmatter.team}
       />
     </Layout>
   )
 }
 
-LandingPage.propTypes = {
+MissionPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default LandingPage
+export default MissionPage
 
-export const landingPageQuery = graphql`
-  query LandingPage($id: String!) {
+export const missionPageQuery = graphql`
+  query MissionPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        templateKey
         image {
           publicURL
+        }
+        templateKey
+        team {
+          name
+          position
+          blurb
+          photo {
+            publicURL
+          }
         }
       }
     }
