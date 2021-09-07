@@ -5,32 +5,47 @@ import Layout from '../components/Layout'
 import TeamMember from '../components/TeamMember'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, intro, teamList, contentComponent }) => {
+export const AboutPageTemplate = ({ title, image,  intro, teamList, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+    <div>
 
-              <PageContent className="content" content={intro} />
+      {image != null ? (
+        <div 
+          className="hero-container mt-0"
+          >
+            <img src= {`${ image.publicURL }`} />
+        </div>
+      ) : null
+      }
 
-              <TeamMember data={teamList} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                  {title}
+                </h2>
+
+                <PageContent className="content" content={intro} />
+
+                <TeamMember data={teamList} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
+
   )
 }
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
   intro: PropTypes.string,
   teamList: PropTypes.array,
   contentComponent: PropTypes.func,
@@ -44,6 +59,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        image={post.frontmatter.image}
         intro={post.html}
         teamList={post.frontmatter.team}
       />
@@ -63,6 +79,9 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          publicURL
+        }
         templateKey
         team {
           name
