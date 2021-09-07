@@ -98,6 +98,15 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Body, name: body, widget: markdown}
 
+      - file: "src/pages/blog.md"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Body, name: body, widget: markdown}
+
       - file: "src/pages/resources.md"
         label: "Resources"
         name: "resources"
