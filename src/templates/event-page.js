@@ -30,7 +30,7 @@ export const EventPageTemplate = ({ title, image, body, contentComponent }) => {
           <div className="columns">
             <div className="column is-10 is-offset-1">
 
-                <h2 className="title is-size-2 has-text-weight-bold is-bold-light ribbon">
+                <h2 className="mb-5 is-size-2 has-text-weight-bold is-bold-light ribbon">
                   {title}
                 </h2>
 
